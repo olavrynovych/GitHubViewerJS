@@ -22,7 +22,7 @@
       return $http.get(repoUrl)
             .then(function(responce){
                     repo = responce.data;
-                  return $http.get(repoUrl+"/contributors", options)
+                  return $http.get(repoUrl+"/contributors")
                             .then(function(responce){
                                   repo.collaborators = responce.data;
                                   return repo; 
