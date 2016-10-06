@@ -1,15 +1,17 @@
+<div >
 <h4>Repository Name: {{repo.name}}</h4>
 <div>
   Open Issues: {{repo.open_issues_count}}
 </div>
 
 <div>
-  <ul>
-    <li ng-repeat="user in repo.collaborators">
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="user in repo.collaborators">
       <img ng-src="{{user.avatar_url}}" width="150" alt="{{user.name}}">
       User Name: {{user.login}}
     </li>
   </ul>
 </div>
-<a href="#/main" type="button">To main page</a>
-<a href="#/user/{{repo.owner.login}}" type="button">Back to {{repo.owner.login}}</a>
+<a href="#/main" type="button" class="btn btn-success">To main page</a>
+<a href="#/user/{{repo.owner.login}}" type="button" class="btn btn-success">Back to {{repo.owner.login}}</a>
+</div>
